@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci80ns17w2jpt"]
+
+[ext_resource type="Script" uid="uid://dtnp0e8g0eie7" path="res://Scripts/enemy.gd" id="1_sfbg3"]
+[ext_resource type="Texture2D" uid="uid://cx84rkvpcwe33" path="res://Sprites/Frontview Batch Battlers/Aspiring Knight Gladius.png" id="2_sfbg3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh6fc"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yphsp"]
+radius = 23.0
+
+[node name="arcane_crystal_enemy" type="CharacterBody2D"]
+script = ExtResource("1_sfbg3")
+enemy_name = "Aspiring Knight"
+enemy_description = "Despite having a menacingly large sword, this knight is actually horrendous at using it."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -5)
+texture = ExtResource("2_sfbg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dh6fc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yphsp")

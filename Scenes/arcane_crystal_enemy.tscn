@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://by4rnh7ptt0rr"]
+
+[ext_resource type="Script" uid="uid://dtnp0e8g0eie7" path="res://Scripts/enemy.gd" id="1_o6rjw"]
+[ext_resource type="Texture2D" uid="uid://c3dgbhl3f8ea3" path="res://Sprites/Frontview Batch Battlers/Arcane Crystal.png" id="2_o6rjw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh6fc"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yphsp"]
+radius = 23.0
+
+[node name="arcane_crystal_enemy" type="CharacterBody2D"]
+script = ExtResource("1_o6rjw")
+enemy_name = "Arcane Crystal"
+enemy_description = "A purple arcane crystal. It contains evil abilities."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -5)
+texture = ExtResource("2_o6rjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dh6fc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yphsp")

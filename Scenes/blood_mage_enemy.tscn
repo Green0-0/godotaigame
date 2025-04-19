@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ixsxc8ei14fb"]
+
+[ext_resource type="Script" uid="uid://dtnp0e8g0eie7" path="res://Scripts/enemy.gd" id="1_modxu"]
+[ext_resource type="Texture2D" uid="uid://cb4n7jwhlxpk0" path="res://Sprites/Frontview Batch Battlers/Blood Manipulation Mage.png" id="2_modxu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh6fc"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yphsp"]
+radius = 23.0
+
+[node name="arcane_crystal_enemy" type="CharacterBody2D"]
+script = ExtResource("1_modxu")
+enemy_name = "Blood Mage"
+enemy_description = "A blood mage. Terribly afraid of grass."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -5)
+texture = ExtResource("2_modxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dh6fc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yphsp")

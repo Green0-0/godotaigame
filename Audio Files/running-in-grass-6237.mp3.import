@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duutk6ge20f2q"
+path="res://.godot/imported/running-in-grass-6237.mp3-e0cc07e8cf395501a3850dde0c0b8dfb.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/running-in-grass-6237.mp3"
+dest_files=["res://.godot/imported/running-in-grass-6237.mp3-e0cc07e8cf395501a3850dde0c0b8dfb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

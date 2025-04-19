@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt54mq5325djm"]
+
+[ext_resource type="Script" uid="uid://dtnp0e8g0eie7" path="res://Scripts/enemy.gd" id="1_8ng0b"]
+[ext_resource type="Texture2D" uid="uid://dbwip41qw04wj" path="res://Sprites/Frontview Batch Battlers/Boss Sea Mermaid Warrior Undeen.png" id="2_c2bdc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh6fc"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yphsp"]
+radius = 23.0
+
+[node name="water_girl_enemy" type="CharacterBody2D"]
+script = ExtResource("1_8ng0b")
+enemy_name = "Sea Mermaid"
+enemy_description = "A mermaid from the sea. She is scared of loud noises."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -5)
+texture = ExtResource("2_c2bdc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dh6fc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yphsp")

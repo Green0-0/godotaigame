@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bprrw5mv24v0x"]
+
+[ext_resource type="Script" uid="uid://dtnp0e8g0eie7" path="res://Scripts/enemy.gd" id="1_yphsp"]
+[ext_resource type="Texture2D" uid="uid://djmq7axflok1t" path="res://Sprites/Frontview Batch Battlers/Boss God Warrior Skoll.png" id="2_yphsp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh6fc"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yphsp"]
+radius = 23.0
+
+[node name="axe_enemy" type="CharacterBody2D"]
+script = ExtResource("1_yphsp")
+enemy_name = "Axe Warrior"
+enemy_description = "An ancient warrior with a giant blue axe that freezes its enemies."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -5)
+texture = ExtResource("2_yphsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dh6fc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yphsp")
