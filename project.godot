@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="AI_Game"
-run/main_scene="uid://btag32b3fg0ub"
+run/main_scene="uid://2eysab6bkvu7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 BattleManager="*res://battle_manager.gd"
+
+[global_group]
+
+transition=""
 
 [input]
 

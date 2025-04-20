@@ -1,0 +1,31 @@
+[gd_scene load_steps=23 format=3 uid="uid://btte71wsq8c4e"]
+
+[ext_resource type="Script" uid="uid://boifxa4qorpmw" path="res://Scenes/character_body_2d.gd" id="1_k1qti"]
+[ext_resource type="Texture2D" uid="uid://c3dgbhl3f8ea3" path="res://Sprites/Frontview Batch Battlers/Arcane Crystal.png" id="2_88fdb"]
+[ext_resource type="Texture2D" uid="uid://nhts7jibe7yx" path="res://Sprites/Frontview Batch Battlers/Arcane Orb Wind.png" id="2_udf75"]
+[ext_resource type="Texture2D" uid="uid://bq1ugr8k47si8" path="res://Sprites/Frontview Batch Battlers/Arcane Orb Fire.png" id="3_envvc"]
+[ext_resource type="Texture2D" uid="uid://cx84rkvpcwe33" path="res://Sprites/Frontview Batch Battlers/Aspiring Knight Gladius.png" id="4_swg58"]
+[ext_resource type="Texture2D" uid="uid://bje7wbfk6erwq" path="res://Sprites/Frontview Batch Battlers/Assasin Garland.png" id="5_52myo"]
+[ext_resource type="Texture2D" uid="uid://dk0c5ufrsbqkd" path="res://Sprites/Frontview Batch Battlers/Assembling Automatons Automaton A.png" id="6_ls4o4"]
+[ext_resource type="Texture2D" uid="uid://cb4n7jwhlxpk0" path="res://Sprites/Frontview Batch Battlers/Blood Manipulation Mage.png" id="7_iqyd1"]
+[ext_resource type="Texture2D" uid="uid://cjwi0t7jh2jvw" path="res://Sprites/Frontview Batch Battlers/Boss Ancient Priestess.png" id="8_v6g35"]
+[ext_resource type="Texture2D" uid="uid://c4yk5m2mq7yh3" path="res://Sprites/Frontview Batch Battlers/Boss Sea Calamity Urmica.png" id="9_eb8d0"]
+[ext_resource type="Texture2D" uid="uid://djmq7axflok1t" path="res://Sprites/Frontview Batch Battlers/Boss God Warrior Skoll.png" id="10_5noci"]
+[ext_resource type="Texture2D" uid="uid://dbwip41qw04wj" path="res://Sprites/Frontview Batch Battlers/Boss Sea Mermaid Warrior Undeen.png" id="11_1uaok"]
+[ext_resource type="Texture2D" uid="uid://bis3t3s1cmyn6" path="res://Sprites/Frontview Batch Battlers/Clockwork Knight D.png" id="12_ldy65"]
+[ext_resource type="Texture2D" uid="uid://gb3noppak7ct" path="res://Sprites/Frontview Batch Battlers/Colossal Snake Red.png" id="13_dl3im"]
+[ext_resource type="Texture2D" uid="uid://csdpgtuvp6iwq" path="res://Sprites/Frontview Batch Battlers/Cybermancer.png" id="14_bwkf8"]
+[ext_resource type="Texture2D" uid="uid://rl3xyyki3jhf" path="res://Sprites/Frontview Batch Battlers/Darkness Ogre.png" id="15_qp4vr"]
+[ext_resource type="Texture2D" uid="uid://bgw81ghdmyyek" path="res://Sprites/Frontview Batch Battlers/Earth Mandrake.png" id="16_ykpkj"]
+[ext_resource type="Texture2D" uid="uid://rwr642va8xqr" path="res://Sprites/Frontview Batch Battlers/Elemental Gemstone Thunder.png" id="17_ekbb8"]
+[ext_resource type="Texture2D" uid="uid://w5abdl7cn2vv" path="res://Sprites/Frontview Batch Battlers/Forest Noxluff.png" id="18_gxj77"]
+[ext_resource type="Texture2D" uid="uid://c4r1mosmrqw3n" path="res://Sprites/Frontview Batch Battlers/Halloween Pumpkin Chariot Minion B.png" id="19_oejkh"]
+[ext_resource type="Texture2D" uid="uid://dp202ex7s7kxs" path="res://Sprites/Frontview Batch Battlers/Insects Ant Lion.png" id="20_ovy6n"]
+[ext_resource type="Texture2D" uid="uid://ckomexgxp5ss8" path="res://Sprites/Frontview Batch Battlers/Kobolds Mage Kobold.png" id="21_ivs62"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_k1qti")
+possible_sprites = Array[CompressedTexture2D]([ExtResource("2_88fdb"), ExtResource("3_envvc"), ExtResource("4_swg58"), ExtResource("5_52myo"), ExtResource("6_ls4o4"), ExtResource("7_iqyd1"), ExtResource("8_v6g35"), ExtResource("9_eb8d0"), ExtResource("10_5noci"), ExtResource("11_1uaok"), ExtResource("12_ldy65"), ExtResource("13_dl3im"), ExtResource("14_bwkf8"), ExtResource("15_qp4vr"), ExtResource("16_ykpkj"), ExtResource("17_ekbb8"), ExtResource("18_gxj77"), ExtResource("19_oejkh"), ExtResource("20_ovy6n"), ExtResource("21_ivs62"), null, null, null, null, null, null, null, null, null, null])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_udf75")

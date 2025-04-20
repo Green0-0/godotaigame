@@ -7,12 +7,9 @@ extends CharacterBody2D
 @export var sprite: Sprite2D
 @export var sprite2: Sprite2D
 @export var animation_player: AnimationPlayer
+@export var walk_sfx: AudioStreamPlayer2D
 
-var skills_name = ["Kick", "Menace", "Yell", "Iron Sword", "Iron Shield", "Fire Amulet"]
-var skills_descriptions = ["The player kicks at a nearby target.", "The player emits a menacing aura.", 
-"The player yells out loud.", "A slightly rusty sword. Its dull handle has a habit of cutting its user.", 
-"A slightly rusty shield. Its dull handle has a habit of cutting its user.", 
-"A fire amulet. When used, it explodes, igniting everything in its vicinity. Use with care!"]
+
 
 func _physics_process(delta):
 	# Get input direction
@@ -40,8 +37,11 @@ func _physics_process(delta):
 	if animation_player:
 		if direction != Vector2.ZERO:
 			animation_player.play("run")
+			if not walk_sfx.playing:
+				walk_sfx.play()
 		else:
 			animation_player.play("stand")
+			walk_sfx.stop()
 	
 	# Move the character
 	move_and_slide()

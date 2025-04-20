@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://llrhunf6kyf5"
+path="res://.godot/imported/combat_music_1.mp3-16cefa77e700f292574eb9ba89621f48.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/combat_music_1.mp3"
+dest_files=["res://.godot/imported/combat_music_1.mp3-16cefa77e700f292574eb9ba89621f48.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

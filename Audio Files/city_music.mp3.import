@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dx1u8u6sbldu3"
+path="res://.godot/imported/city_music.mp3-03abf2c5c98db355ba05bcc7da1c1319.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/city_music.mp3"
+dest_files=["res://.godot/imported/city_music.mp3-03abf2c5c98db355ba05bcc7da1c1319.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

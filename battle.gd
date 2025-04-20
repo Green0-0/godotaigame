@@ -74,7 +74,9 @@ func _process(delta):
 				label.text = enemy_response + "\n[Press Enter to Act]"
 				ui_state = "start_text"
 		if ui_state == "tease_actions":
-			for i in range(1, 10):  # Numbers 1 through 9
+			for i in range(0, 9):  # Numbers 1 through 9
+				if i >= BattleManager.player_skills_name.size():
+					break
 				if Input.is_action_just_pressed("p" + str(i)):
 					if player_turn:
 						cachedID = i
@@ -117,7 +119,7 @@ func lose_battle():
 	battle_active = false
 	
 	# Return to game scene with defeat status
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scenes/start.tscn")
 
 # Example function for player attack action
 # You'll implement the actual battle mechanics
@@ -233,12 +235,9 @@ func parse_tool_calls(python_string: String) -> void:
 		enemyshaker.play("shake")
 
 func send_request(input):
-	print(input)
 	requesting = true
 	# Set up the request
-	var host = "localhost"
-	var port = 32768
-	var url = "http://%s:%s/v1/openai/v1/chat/completions" % [host, port]
+	var url = "http://%s:%s/v1/openai/v1/chat/completions" % [BattleManager.host, BattleManager.port]
 	var payload = {
 		"model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
 		"messages": input,

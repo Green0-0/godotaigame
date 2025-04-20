@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://tde5w8pqr7ti"]
+
+[ext_resource type="Texture2D" uid="uid://djae7ba6m6rra" path="res://Sprites/Frontview Batch Battlers/Sea Mermaid.png" id="1_dt6c8"]
+[ext_resource type="Script" uid="uid://d2uslywlpebq5" path="res://npc_child.gd" id="1_fq40a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dt6c8"]
+radius = 22.0227
+
+[sub_resource type="LabelSettings" id="LabelSettings_dt6c8"]
+font_size = 30
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fq40a"]
+radius = 186.269
+
+[sub_resource type="LabelSettings" id="LabelSettings_fq40a"]
+font_size = 13
+
+[node name="npc_child" type="CharacterBody2D"]
+script = ExtResource("1_fq40a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 5)
+texture = ExtResource("1_dt6c8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dt6c8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1.0
+offset_top = -74.0
+offset_right = 39.0
+offset_bottom = -32.0
+text = "!"
+label_settings = SubResource("LabelSettings_dt6c8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 154)
+shape = SubResource("CircleShape2D_fq40a")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+offset_left = -269.0
+offset_top = 214.0
+offset_right = 279.0
+offset_bottom = 331.0
+placeholder_text = "Type your message here..."
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -272.0
+offset_top = 64.0
+offset_right = 277.0
+offset_bottom = 209.0
+color = Color(0, 0, 0, 0.447059)
+
+[node name="Dialogue" type="Label" parent="."]
+visible = false
+offset_left = -264.0
+offset_top = 70.0
+offset_right = 270.0
+offset_bottom = 204.0
+text = "Wahhh.... *sobs*"
+label_settings = SubResource("LabelSettings_fq40a")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 218.0
+offset_top = 295.0
+offset_right = 275.0
+offset_bottom = 326.0
+text = "Send"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
